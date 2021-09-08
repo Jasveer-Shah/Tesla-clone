@@ -41,7 +41,7 @@ function Header() {
                <li><button href='#'>Used Inventory</button></li>
                <li><button href='#'>Trade-in</button></li>
                <li><button href='#'>Cybertruck</button></li>
-               <li><button href='#'>Rosdster</button></li>
+               <li><button href='#'>Roadster</button></li>
                
             </BurgerNav>
        </Container>
