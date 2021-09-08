@@ -12,11 +12,11 @@ function Header() {
     return (
        <Container>
            <a>
-               <img src='/images/logo.svg'/>
+               <img src='/images/logo.svg' alt='tesla-logo'/>
            </a>
            <Menu>
                 {cars && cars.map((car, index) => (
-                    <a key={index} href='#'>{car}</a>
+                    <button key={index} href='#'>{car}</button>
                 ))}
 {/* 
                 <a href='#'>Model S</a>
@@ -25,8 +25,8 @@ function Header() {
                 <a href='#'>Model Y</a> */}
            </Menu>
            <RightMenu>
-               <a href="#">Shop</a>
-               <a href="#">Tesla Account</a>
+               <button href="#">Shop</button>
+               <button href="#">Account</button>
                <CustomMenu onClick={() => setBurgerStatus(true)}/>
            </RightMenu>
 
@@ -37,11 +37,11 @@ function Header() {
                {cars && cars.map((car, index) => (
                     <a key={index} href='#'>{car}</a>
                 ))}
-               <li><a href='#'>Existing Inventory</a></li>
-               <li><a href='#'>Used Inventory</a></li>
-               <li><a href='#'>Trade-in</a></li>
-               <li><a href='#'>Cybertruck</a></li>
-               <li><a href='#'>Roadaster</a></li>
+               <li><button href='#'>Existing Inventory</button></li>
+               <li><button href='#'>Used Inventory</button></li>
+               <li><button href='#'>Trade-in</button></li>
+               <li><button href='#'>Cybertruck</button></li>
+               <li><button href='#'>Rosdster</button></li>
                
             </BurgerNav>
        </Container>
@@ -70,11 +70,13 @@ const Menu = styled.div`
     flex:1;
     justify-content: center;
 
-   a {
+   button {
         font-weight: 600;
         text-transform: uppercase;
         padding: 0 10px;
         flex-wrap: nowrap;
+        background: none;
+        border: none;
     }
 
     @media(max-width: 768px){
@@ -85,12 +87,14 @@ const Menu = styled.div`
 const RightMenu = styled.div`
        display: flex;
         align-items: center;
-       a {
+       button {
         font-weight: 600;
         text-transform: uppercase;
         margin-right: 10px;
         /* padding: 0 10px; */
         flex-wrap: nowrap;
+        background: none;
+        border: none;
     }
 `
 
@@ -120,8 +124,16 @@ const BurgerNav = styled.div`
          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
      }
 
-     a{
+    button{
+         font-weight: 400;
+         border-radius: 20px;
+         outline:none;
+         border:none;
+         color:#696969;
          font-weight: 600;
+         cursor: pointer;
+         border-bottom: none;
+         background: none;
      }
 `
 
