@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
-
+import { keyframes } from 'styled-components';
 function Section({title, description, leftbtntxt, rightbtntxt, backgroundImg}) {
     return (
         <Wrap bgImage={backgroundImg}>
@@ -14,7 +14,7 @@ function Section({title, description, leftbtntxt, rightbtntxt, backgroundImg}) {
            <Button>
             <Fade bottom>
            <ButtonGroup>
-               <LeftButton>
+               <LeftButton className='pulse'>
                    {leftbtntxt}
                </LeftButton>
                {  rightbtntxt && 
@@ -61,6 +61,17 @@ margin-bottom:30px;
 
      
 `
+const pulse = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
 const LeftButton = styled.div`
         background-color:rgba(23, 26, 32, 0.8);
         height: 40px;
@@ -75,6 +86,15 @@ const LeftButton = styled.div`
         font-size: 12px;
         cursor:pointer;
         margin: 8px;
+
+        &:hover   {
+       
+ animation: ${pulse} 1s linear infinite;
+ color: white;
+ background-color: rgba(0, 26, 32, 1);
+};
+
+
 
 `
 const RightButton = styled(LeftButton)`

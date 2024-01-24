@@ -13,6 +13,9 @@
   }
 }
 
+button {
+  cursor: pointer;
+}
 .App-header {
   min-height: 100vh;
   display: flex;
@@ -37,3 +40,5 @@
     transform: translateY(0px);
   }
 }
+
+

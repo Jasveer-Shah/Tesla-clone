@@ -16,10 +16,10 @@ function Header() {
            </a>
            <Menu>
                 {cars && cars.map((car, index) => (
-                    <button key={index} >{car}</button>
+                  <button className='pulse' key={index} >{car}</button>
                 ))}
-{/* 
-                <a href='#'>Model S</a>
+
+                {/* <a href='#'>Model S</a>
                 <a href='#'>Model 3</a>
                 <a href='#'>Model X</a>
                 <a href='#'>Model Y</a> */}
@@ -54,6 +54,7 @@ const Container = styled.div`
      min-height: 60px;
      position:fixed;
      display: flex;
+     background-color: 	rgb(245,245,245, 0.6);
      align-items: center;
      justify-content: space-between;
      padding: 0 20px;
@@ -77,6 +78,12 @@ const Menu = styled.div`
         flex-wrap: nowrap;
         background: none;
         border: none;
+
+        &:hover ,
+        &:focus{
+           color:black;
+           font-weight: 620;
+        }
     }
 
     @media(max-width: 768px){
@@ -119,14 +126,22 @@ const BurgerNav = styled.div`
      text-align: start;
      transform: ${props => props.show ? 'translateX(0)' : "translateX(100%)"}; 
      transition: transform 0.3s;
+
+   
      li {
-         padding: 15px 0px;
-         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+         padding: 40px 30px;
+         border-bottom: 1px solid 	rgb(105,105,105);
+         &:hover ,
+         &:focus{
+         background-color:rgb(168,168,168);
+         box-shadow: 5px 2px 5px 2px 		rgb(80,80,80);
+         }
+      
      }
 
     button{
          font-weight: 400;
-         border-radius: 20px;
+        //  border-radius: 20px;
          outline:none;
          border:none;
          color:#696969;
@@ -134,6 +149,14 @@ const BurgerNav = styled.div`
          cursor: pointer;
          border-bottom: none;
          background: none;
+      
+
+         &:hover ,
+         &:focus {
+           color:white; 
+           font-weight: 600;
+         }
+      
      }
 `
 
