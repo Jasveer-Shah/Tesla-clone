@@ -54,8 +54,8 @@ const Container = styled.div`
      min-height: 60px;
      position:fixed;
      display: flex;
-    //  background-color: 	rgb(245,245,245, 0.6);
-     background-color: rgba(0,0,0, 0.2);
+     background-color: 	rgb(245,245,245, 0.6);
+    //  background-color: rgba(0,0,0, 0.2);
      align-items: center;
      justify-content: space-between;
      padding: 0 20px;
